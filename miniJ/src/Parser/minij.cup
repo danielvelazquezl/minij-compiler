@@ -110,10 +110,10 @@ VarDeclarationList ::=
   {: vdl.add(vd); RESULT = vdl; :};
 
 VarDeclaration ::= Type:t Identifier:id SEMICOLON
-  {: RESULT = new VarDecl(t, id, tleft); :}
+  {: RESULT = new VarDecl(t, id, null, tleft); :}
 
-  | Type:t Statement:st
-  {: RESULT = new VarDecl(t, st, tleft); :};
+  | Type:t Identifier:id BECOMES Expression:ex
+  {: RESULT = new VarDecl(t, id, ex, tleft); :};
 
 MethodDeclaration ::= PUBLIC Type:t Identifier:id LPAREN FormalList:fl RPAREN LCURLY 
   VarDeclarationList:vdl StatementList:stl RETURN Expression:ex SEMICOLON RCURLY

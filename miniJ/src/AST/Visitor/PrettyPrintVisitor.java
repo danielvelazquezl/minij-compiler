@@ -99,12 +99,12 @@ public class PrettyPrintVisitor implements Visitor {
   public void visit(VarDecl n) {
     n.t.accept(this);
     System.out.print(" ");
-    if (n.i != null) {
-      n.i.accept(this);
-      System.out.print(";");
-    } else { 
-      n.s.accept(this);
+    n.i.accept(this);
+    if (n.e != null) {
+      System.out.print(" ");
+      n.e.accept(this);
     }
+    System.out.print(";");
   }
 
   // Type t;

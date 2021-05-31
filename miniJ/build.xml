@@ -70,7 +70,7 @@
 
   <target name="test-scanner" depends="compile">
     <java classname="TestScanner" classpath="build/classes;lib/CUP.jar"
-	  fork="true" input="SamplePrograms/SampleMiniJPrograms/BubbleSort.java">
+	  fork="true" input="SamplePrograms/SampleMiniJPrograms/Factorial.java">
     </java>
   </target>
 <!-- SampleMiniJPrograms/Factorial -->
