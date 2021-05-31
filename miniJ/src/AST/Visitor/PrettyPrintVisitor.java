@@ -95,7 +95,7 @@ public class PrettyPrintVisitor implements Visitor {
   }
 
   // Type t;
-  // Identifier i or Statement e
+  // Identifier i or Statement s
   public void visit(VarDecl n) {
     n.t.accept(this);
     System.out.print(" ");

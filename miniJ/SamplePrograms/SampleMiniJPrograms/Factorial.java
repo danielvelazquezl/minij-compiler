@@ -20,11 +20,12 @@ public class Fac {
 			int a = num_aux.length;
 			int b = 2;
 			int [] arr;
-			if (num < 1)
+			if (num < 1) {
 					num_aux = 1 ;
-			else 
+			} else {
 					num_aux = num * (this.ComputeFac(num-1)) ;
 					num_aux = num * (2) ;
+			}
 			return num_aux ;
     }
 
