@@ -30,4 +30,4 @@ public void add(Statement n) {
   list.add(0, n);
 }
 ```
-### Author: Federico Daniel Velazquez Lopez
+### Author: Federico Daniel Velázquez López
