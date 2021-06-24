@@ -20,12 +20,13 @@ public class Fac {
 			int a = num_aux.length;
 			int b = 2;
 			int [] arr;
-			if (num < 1) {
+			if (r + 1 * y > 5 + y * 5) {
 					num_aux = 1 ;
 			} else {
 					num_aux = num * (this.ComputeFac(num-1)) ;
 					num_aux = num * (2) ;
 			}
+			num_aux = num_aux + (2 * 4);
 			return num_aux ;
     }
 

@@ -73,11 +73,12 @@
 	  fork="true" input="SamplePrograms/SampleMiniJPrograms/Factorial.java">
     </java>
   </target>
-<!-- SampleMiniJPrograms/Factorial -->
-<!-- SampleMiniJPrograms/BubbleSort -->
+<!-- Factorial -->
+<!-- BubbleSort -->
+<!-- QuickSort -->
   <target name="test-parser" depends="compile">
     <java classname="TestParser" classpath="build/classes;lib/CUP.jar"
-	  fork="true" input="SamplePrograms/SampleMiniJPrograms/BubbleSort.java">
+	  fork="true" input="SamplePrograms/SampleMiniJPrograms/Factorial.java">
     </java>
   </target>
 

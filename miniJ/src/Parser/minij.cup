@@ -77,9 +77,9 @@ nonterminal Formal Formal;
 nonterminal FormalList FormalList;
 
 /* Precedence declarations */
-precedence left PLUS, MINUS, TIMES, DIVIDE;
 precedence left LESSTHAN, GREATERTHAN, AND, OR, EQUAL, NOTEQUAL;
-
+precedence left PLUS, MINUS;
+precedence left TIMES, DIVIDE;
 
 /* Productions */
 
@@ -112,7 +112,7 @@ VarDeclarationList ::=
 VarDeclaration ::= Type:t Identifier:id SEMICOLON
   {: RESULT = new VarDecl(t, id, null, tleft); :}
 
-  | Type:t Identifier:id BECOMES Expression:ex
+  | Type:t Identifier:id BECOMES Expression:ex SEMICOLON
   {: RESULT = new VarDecl(t, id, ex, tleft); :};
 
 MethodDeclaration ::= PUBLIC Type:t Identifier:id LPAREN FormalList:fl RPAREN LCURLY 
@@ -131,7 +131,7 @@ FormalList ::=
   | Formal:f 
   {: RESULT = new FormalList(fleft); RESULT.add(f); :}
 
-  | Formal:f COMA FormalList:fl
+  | FormalList:fl COMA Formal:f
   {: fl.add(f); RESULT = fl; :};
 
 Formal ::= Type:t Identifier:id
@@ -188,7 +188,7 @@ ExpressionList ::=
   | Expression:ex
   {: RESULT = new ExpList(exleft); RESULT.add(ex); :}
 
-  | Expression:ex COMA ExpressionList:exl
+  | ExpressionList:exl COMA Expression:ex
   {: exl.add(ex); RESULT = exl; :};
 
 Expression ::= IDENTIFIER:name
