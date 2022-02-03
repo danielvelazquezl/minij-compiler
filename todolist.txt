@@ -1,0 +1,7 @@
+TODO list compilador
+- inventario de los tipos de datos (enteros, arreglos de enteros, clases)
+- construir la tabla de simbolos (variables, metodos, clases)
+
+ejemplo Liz
+tabla de clases que contiene otra tabla que contenga los metodos, de variables y demas
+- +2 visitors: 1 para construir la tabla, y para hacer los chequeos
