@@ -1,5 +1,6 @@
 package AST;
 import AST.Visitor.Visitor;
+import semantic.ClassSymbol;
 
 public class VarDecl extends ASTNode {
   public Type t;
@@ -11,7 +12,7 @@ public class VarDecl extends ASTNode {
     t=at; i=ai; e=ae; 
   }
 
-  public void accept(Visitor v) {
-    v.visit(this);
+  public <E> void accept(Visitor v, E cm) {
+    v.visit(this, cm);
   }
 }

@@ -1,5 +1,6 @@
 package AST;
 import AST.Visitor.Visitor;
+import semantic.ClassSymbol;
 
 public class MethodDecl extends ASTNode {
   public Type t;
@@ -15,7 +16,7 @@ public class MethodDecl extends ASTNode {
     t=at; i=ai; fl=afl; vl=avl; sl=asl; e=ae;
   }
  
-  public void accept(Visitor v) {
-    v.visit(this);
+  public void accept(Visitor v, ClassSymbol c) {
+    v.visit(this, c);
   }
 }

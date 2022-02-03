@@ -9,7 +9,7 @@ public class IdentifierType extends Type {
     s=as;
   }
 
-  public void accept(Visitor v) {
-    v.visit(this);
+  public String accept(Visitor v) {
+    return v.visit(this);
   }
 }

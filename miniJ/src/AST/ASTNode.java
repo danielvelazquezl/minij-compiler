@@ -1,5 +1,4 @@
 package AST;
-import AST.Visitor.Visitor;
 
 abstract public class ASTNode {
   // Instance variables
@@ -12,5 +11,9 @@ abstract public class ASTNode {
   // Constructor
   public ASTNode(int ln) {
     line_number = ln;
+  }
+
+  public int getLineNumber() {
+    return line_number;
   }
 }

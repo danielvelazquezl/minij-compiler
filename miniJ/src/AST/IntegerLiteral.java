@@ -1,5 +1,6 @@
 package AST;
 import AST.Visitor.Visitor;
+import semantic.VariableSymbol;
 
 public class IntegerLiteral extends Exp {
   public int i;
