@@ -24,3 +24,11 @@ hs_err_pid*
 
 # eclipse configurations
 .settings
+
+# visual workspace
+*.code-workspace
+
+# compiled files
+src/Scanner/scanner.java
+src/Parser/sym.java
+src/Parser/parser.java
