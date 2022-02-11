@@ -39,3 +39,7 @@ public class Fac {
 		}
 
 }
+
+public class Fac {
+	
+}
