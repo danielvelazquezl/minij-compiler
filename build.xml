@@ -82,10 +82,4 @@
     </java>
   </target>
 
-  <target name="test-semantic" depends="compile">
-    <java classname="TestSemantic" classpath="build/classes;lib/CUP.jar"
-	  fork="true" input="SamplePrograms/SampleMiniJPrograms/Factorial.java">
-    </java>
-  </target>
-
 </project>
