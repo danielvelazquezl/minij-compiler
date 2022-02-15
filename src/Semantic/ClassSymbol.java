@@ -1,30 +1,36 @@
 package Semantic;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
+import AST.Identifier;
+import AST.IdentifierType;
+
 public class ClassSymbol extends BasicSymbol {
-  private String name;
-  private HashMap<String, VariableSymbol> variableList;
+  private ArrayList<VariableSymbol> variableList;
+  private ArrayList<MethodSymbol> methodList;
 
-  public ClassSymbol(String name, int ln) {
-    super(ln);
-    this.name = name;
-    this.variableList = new HashMap<String, VariableSymbol>();
+  public ClassSymbol(Identifier id) {
+    super(new IdentifierType(id.s, id.getLine()), id);
+    variableList = new ArrayList<VariableSymbol>();
+    methodList = new ArrayList<MethodSymbol>();
   }
 
-  public String getName() {
-    return name;
-  }
-
-  public HashMap<String, VariableSymbol> getVariableList() {
+  public ArrayList<VariableSymbol> getVariableList() {
     return variableList;
   }
 
-  public boolean addVariable(VariableSymbol v) {
-    if (!this.variableList.containsKey(v.getName())) {
-      this.variableList.put(v.getName(), v);
-      return true;
-    }
-    return false;
+  public ArrayList<MethodSymbol> getMethodList() {
+    return methodList;
   }
+
+  public void addVariable(VariableSymbol v) {
+    variableList.add(v);
+  }
+
+  public void addMethod(MethodSymbol m) {
+    methodList.add(m);
+  }
+
+  
 }

@@ -1,24 +1,11 @@
 package Semantic;
 
-enum Type {
-  INT, ARRAY, CLASS
-}
+import AST.Identifier;
+import AST.Type;
 
 public class VariableSymbol extends BasicSymbol {
-  private Type type;
-  private String name;
 
-  public VariableSymbol(Type t, String n, int ln) {
-    super(ln);
-    this.type = t;
-    this.name = n;
-  }
-
-  public Type getType() {
-    return type;
-  }
-
-  public String getName() {
-    return name;
+  public VariableSymbol(Type t, Identifier id) {
+    super(t, id);
   }
 }

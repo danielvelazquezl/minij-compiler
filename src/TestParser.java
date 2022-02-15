@@ -3,7 +3,6 @@ import Parser.*;
 import AST.*;
 import AST.Visitor.*;
 import java_cup.runtime.Symbol;
-import java.util.*;
 
 public class TestParser {
     public static void main(String [] args) {

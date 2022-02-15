@@ -88,4 +88,10 @@
     </java>
   </target>
 
+  <target name="test-code" depends="compile">
+    <java classname="TestCodeGenerator" classpath="build/classes;lib/CUP.jar"
+	  fork="true" input="SamplePrograms/SimpleClass.java">
+    </java>
+  </target>
+
 </project>

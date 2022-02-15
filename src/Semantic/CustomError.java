@@ -1,16 +1,15 @@
 package Semantic;
 
-public class Error {
+public class CustomError {
   private String message;
   private int line;
 
-  public Error(String m, int l) {
+  public CustomError(String m, int l) {
     this.message = m;
     this.line = l;
   }
 
-  @Override
-  public String toString() {
+  public String getMessage() {
     return "Error: " + this.message + ". Line: " + this.line;
   }
 }

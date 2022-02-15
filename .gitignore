@@ -32,3 +32,4 @@ hs_err_pid*
 src/Scanner/scanner.java
 src/Parser/sym.java
 src/Parser/parser.java
+*.j
