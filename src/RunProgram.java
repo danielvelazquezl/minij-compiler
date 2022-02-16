@@ -1,6 +1,9 @@
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
+/**
+ * Util for running the jasmin files in the CLI.
+ */
 public class RunProgram {
 
   public static void run(String command) {

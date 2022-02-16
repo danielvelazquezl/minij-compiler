@@ -94,4 +94,10 @@
     </java>
   </target>
 
+  <target name="test-code-win" depends="compile">
+    <java classname="TestCodeGeneratorWin" classpath="build/classes;lib/CUP.jar"
+	  fork="true" input="SamplePrograms/SimpleClass.java">
+    </java>
+  </target>
+
 </project>
