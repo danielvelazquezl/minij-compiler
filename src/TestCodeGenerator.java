@@ -27,9 +27,6 @@ public class TestCodeGenerator {
       } else {
         program.accept(cVisitor);
         cVisitor.generateFiles();
-        System.out.println("Starting to compile and run...\n");
-        RunProgram.run("java -jar jasmin.jar SimpleClass.j");
-        RunProgram.run("java SimpleClass");
       }
     } catch (Exception e) {
       System.err.println("Unexpected internal compiler error: " + e.toString());

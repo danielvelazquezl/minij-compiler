@@ -1,0 +1,11 @@
+Informe
+Las primeras 2 partes siguen igual. Para la 3ra parte logre la implementacion de la tabla
+de simbolos que me permite validar variables duplicadas, declaraciones con tipos incompatibles,
+tipo de return incompatible, definicion de variables con tipos indefinidos, verificacion de 
+tipos durante la asignacion, para estas verificaciones existen casos que detecta como error 
+pero que necesita mejoras (se puede ver la lista de errores ejecutando ant test-semantic).
+Para la parte cuatro se generan los archivos de acuerdo a la cantidad de clases, se injecta 
+la estructura basica de un programa jasmin a cada archivo, pero solo logre imprimir expresiones
+aritmeticas dentro del System.out.println() pasandole directamente la expresion a resolver,
+se puede probar ejecutando ant test-code o en linux ant test-code-linux (este ejecutara
+automaticamente el contenido del archivo SimleClass.java)

@@ -17,8 +17,8 @@ public class TestSemantic {
       SymbolTable sTable = new SymbolTable();
       VarCheckingVisitor iVisitor = new VarCheckingVisitor(sTable);
       TypeCheckingVisitor tVisitor = new TypeCheckingVisitor(sTable);
-      // program.accept(iVisitor);
       program.accept(tVisitor);
+      program.accept(iVisitor);
       sTable.printErrors();
       System.out.println("Semantic analysis completed");
     } catch (Exception e) {

@@ -56,3 +56,8 @@ public class Fac {
     return 2 + 3;
   }
 }
+
+public class Fac { 
+  int variable;
+  int number = 0;
+}
